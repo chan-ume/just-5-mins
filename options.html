@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>設定 - Just 5 Minutes</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Just 5 Minutes 設定</h1>
+
+    <!-- 上限時間設定 -->
+    <section class="section">
+      <h2>上限時間</h2>
+      <div class="form-group">
+        <label for="dailyLimit">1日の使用上限（分）</label>
+        <input type="number" id="dailyLimit" min="1" max="1440" value="5">
+      </div>
+    </section>
+
+    <!-- ドメイン一覧 -->
+    <section class="section">
+      <h2>対象ドメイン</h2>
+      <div id="domainList" class="domain-list">
+        <!-- JavaScriptで動的に生成 -->
+      </div>
+
+      <!-- ドメイン追加フォーム -->
+      <div class="add-domain-form">
+        <input type="text" id="newDomainInput" placeholder="例: example.com">
+        <button id="addDomainBtn" class="btn-secondary">追加</button>
+      </div>
+      <div id="addDomainStatus" class="add-domain-status"></div>
+    </section>
+
+    <!-- 保存ボタン -->
+    <div class="actions">
+      <button id="saveBtn" class="btn-primary">保存</button>
+      <span id="saveStatus" class="save-status"></span>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
